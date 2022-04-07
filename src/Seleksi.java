@@ -106,7 +106,7 @@ public class Seleksi implements BeasiswaMahasiswa, BeasiswaPelajar {
 
     void HasilMahasiswa(int umur, String nama){
         setTotalMahasiswa(getSkj() + getRd() + getKps());
-        if (getTotalMahasiswa() <= 87.5 && umur < 16 && umur >= 24){
+        if (getTotalMahasiswa() <= 87.5 && umur < 16 && umur > 24){
             System.out.println("Maaf " + nama + " Tidak Diterima karena tidak cukup umur atau nilai anda kurang");
         }
         else if(getTotalMahasiswa() >= 87.5 && umur >= 16 && umur <= 24){
@@ -116,10 +116,10 @@ public class Seleksi implements BeasiswaMahasiswa, BeasiswaPelajar {
     }
     void HasilPelajar(int umur, String nama){
         setTotalPelajar(getSke() + getTv() + getKdt());
-        if (getTotalPelajar() <= 87.5 && umur < 16){
+        if (getTotalPelajar() <= 87.5 && umur < 16 && umur > 24){
             System.out.println("Maaf " + nama + " Tidak Diterima karena tidak cukup umur atau nilai anda kurang");
         }
-        else if(getTotalPelajar() >= 87.5 && umur >= 16){
+        else if(getTotalPelajar() >= 87.5 && umur >= 16 && umur <= 24){
             System.out.println("Selamat " + nama + " Diterima karena telah mencukupi persyaratan umur dan nilai");
 
         }
